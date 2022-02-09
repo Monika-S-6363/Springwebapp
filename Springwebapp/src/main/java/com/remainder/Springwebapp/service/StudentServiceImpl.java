@@ -3,7 +3,11 @@ package com.remainder.Springwebapp.service;
 import com.remainder.Springwebapp.model.Student;
 import com.remainder.Springwebapp.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service
 public class StudentServiceImpl implements StudentService{
     @Autowired
     private StudentRepository studentRepository;
@@ -13,4 +17,8 @@ public class StudentServiceImpl implements StudentService{
         return studentRepository.save(student);
     }
 
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
 }
