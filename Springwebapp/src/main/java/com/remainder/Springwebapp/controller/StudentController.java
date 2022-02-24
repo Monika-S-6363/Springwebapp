@@ -23,4 +23,9 @@ public class StudentController {
    public List<Student> getAllStudents(){
         return studentService.getAllStudents();
     }
+
+    @GetMapping("/maxScore")
+    public String maxScore(){
+        return studentService.maxScore();
+    }
 }
