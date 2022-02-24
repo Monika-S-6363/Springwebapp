@@ -12,6 +12,9 @@ public class Student {
     private int id;
     private String name;
     private String address;
+    private int math;
+    private int eng;
+    private int sci;
 
     public Student() {
     }
@@ -38,5 +41,32 @@ public class Student {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    public int getEng() {
+        return eng;
+    }
+
+    public void setEng(int eng) {
+        this.eng = eng;
+    }
+
+    public int getSci() {
+        return sci;
+    }
+
+    public void setSci(int sci) {
+        this.sci = sci;
+    }
+    public int getTotal(){
+        return math+eng+sci;
     }
 }
